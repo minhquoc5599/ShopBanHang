@@ -14,10 +14,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".PasswordActivity"></activity>
-        <activity android:name=".MailActivity" />
-        <activity android:name=".PhoneActivity" />
-        <activity android:name=".NameActivity" />
+        <activity android:name=".personal.PasswordActivity"/>
+        <activity android:name=".personal.MailActivity"
+            android:parentActivityName=".PersonalActivity"/>
+        <activity android:name=".personal.PhoneActivity" />
+        <activity android:name=".personal.NameActivity"
+            android:parentActivityName=".PersonalActivity"/>
         <activity android:name=".PersonalActivity" />
         <activity android:name=".FavoriteActivity" />
         <activity

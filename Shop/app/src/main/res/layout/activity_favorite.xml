@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar
         android:background="@color/colorToolBar"
         android:id="@+id/toolbarFavorite"
-        app:title="@string/toolbarFavoriteProduct"
+        app:title="@string/toolBarFavoriteProduct"
         app:titleTextColor="#FFF"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">

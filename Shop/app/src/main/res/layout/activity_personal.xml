@@ -27,7 +27,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -38,14 +39,15 @@
                 </TextView>
 
                 <TextView
-                    android:layout_width="250dp"
+                    android:id="@+id/tvNamePersonal"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Nguyển Minh Quốc"
                     android:textColor="#6B6A6A"
                     android:textSize="23sp">
                 </TextView>
 
                 <ImageButton
+                    android:id="@+id/btnName"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/ic_action_arrow_right" />
@@ -61,7 +63,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -72,14 +75,15 @@
                 </TextView>
 
                 <TextView
-                    android:layout_width="215dp"
+                    android:id="@+id/tvPhonePersonal"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
-                    android:text="09015435311"
                     android:textColor="#6B6A6A"
                     android:textSize="23sp">
                 </TextView>
 
                 <ImageButton
+                    android:id="@+id/btnPhone"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/ic_action_arrow_right" />
@@ -95,7 +99,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -106,14 +111,15 @@
                 </TextView>
 
                 <TextView
-                    android:layout_width="291dp"
+                    android:id="@+id/tvMailPersonal"
+                    android:layout_width="240dp"
                     android:layout_height="wrap_content"
-                    android:text="minhquoc5599@gmail.com"
                     android:textColor="#6B6A6A"
-                    android:textSize="23sp">
+                    android:textSize="22sp">
                 </TextView>
 
                 <ImageButton
+                    android:id="@+id/btnEmail"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/ic_action_arrow_right" />
@@ -129,10 +135,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
 
                 <TextView
-                    android:layout_width="360dp"
+                    android:layout_width="310dp"
                     android:layout_height="wrap_content"
                     android:text="Thay đổi mật khẩu"
                     android:textColor="#FF000000"
@@ -140,6 +147,7 @@
                 </TextView>
 
                 <ImageButton
+                    android:id="@+id/btnPassWord"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/ic_action_arrow_right" />
