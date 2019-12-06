@@ -63,10 +63,12 @@ public class PersonalActivity extends AppCompatActivity {
                                 userInfos.add(new UserInfo(
                                         jsonObject.getInt("id"),
                                         jsonObject.getString("ten"),
-                                        jsonObject.getString("email")
+                                        jsonObject.getString("email"),
+                                        jsonObject.getString("sdt")
                                 ));
                                 tvMailPersonal.setText(userInfos.get(0).getEmail());
                                 tvNamePersonal.setText(userInfos.get(0).getTen());
+                                tvPhonePersonal.setText(userInfos.get(0).getSdt());
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

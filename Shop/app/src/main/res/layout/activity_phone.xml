@@ -8,7 +8,7 @@
     tools:context=".NameActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarAccount"
+        android:id="@+id/toolbarPhone"
         android:background="@color/colorToolBar"
         app:title="@string/toolBarPhone"
         app:titleTextColor="#FFF"
@@ -36,6 +36,7 @@
 
 
             <EditText
+                android:id="@+id/editPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#6B6A6A"
@@ -45,6 +46,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
+        android:id="@+id/btnChangePhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lưu"

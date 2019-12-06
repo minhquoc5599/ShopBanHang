@@ -80,7 +80,8 @@ public class AccountActivity extends AppCompatActivity {
                                 userInfos.add (new UserInfo(
                                         jsonObject.getInt("id"),
                                         jsonObject.getString("ten"),
-                                        jsonObject.getString("email")
+                                        jsonObject.getString("email"),
+                                        jsonObject.getString("std")
                                 ));
                                 tvMail.setText(userInfos.get(0).getEmail());
                                 tvName.setText(userInfos.get(0).getTen());

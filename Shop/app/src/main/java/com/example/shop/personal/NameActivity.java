@@ -58,7 +58,8 @@ public class NameActivity extends AppCompatActivity {
                                 userInfos.add(new UserInfo(
                                         jsonObject.getInt("id"),
                                         jsonObject.getString("ten"),
-                                        jsonObject.getString("email")
+                                        jsonObject.getString("email"),
+                                        jsonObject.getString("sdt")
                                 ));
                                 editName.setText(userInfos.get(0).getTen());
                             } catch (JSONException e) {

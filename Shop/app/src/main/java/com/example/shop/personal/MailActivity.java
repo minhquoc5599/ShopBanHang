@@ -57,7 +57,8 @@ public class MailActivity extends AppCompatActivity {
                                 userInfos.add(new UserInfo(
                                         jsonObject.getInt("id"),
                                         jsonObject.getString("ten"),
-                                        jsonObject.getString("email")
+                                        jsonObject.getString("email"),
+                                        jsonObject.getString("sdt")
                                 ));
                                 editEmail.setText(userInfos.get(0).getEmail());
                             } catch (JSONException e) {
