@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Shop</string>
+    <string name="titleListItems">Sản phẩm bán chạy</string>
+    <string name="titleFlashSale">Flash Deals</string>
+    <string name="toolBarTitleName">Trang chủ</string>
+    <string name="toolBarDetails">Chi tiết sản phẩm</string>
+    <string name="toolBarCart">Giỏ hàng</string>
+    <string name="toolBarPay">Xác nhận thông tin mua hàng</string>
+    <string name="toolBarAccount">Tài khoản</string>
+    <string name="title_activity_his_order">HisOrderActivity</string>
+    <string name="toolBarFavoriteProduct">Sản phẩm yêu thích</string>
+    <string name="toolBarPersonal">Thông tin cá nhân</string>
+    <string name="toolBarName">Sửa tên</string>
+    <string name="toolBarPhone">Điện thoại</string>
+    <string name="toolBarEmail">Email</string>
+    <string name="toolBarPassword">Mật khẩu</string>
+
+</resources>
