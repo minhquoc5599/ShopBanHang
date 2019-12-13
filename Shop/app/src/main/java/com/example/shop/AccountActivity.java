@@ -66,6 +66,7 @@ public class AccountActivity extends AppCompatActivity {
         tvQLDH = findViewById(R.id.tvQLDH);
         tvSPYT = findViewById(R.id.tvSPYT);
         tvTTCN = findViewById(R.id.tvTTCN);
+
         userInfos = new ArrayList<>();
         String url = Server.getinfo + "?id=" + id;
         RequestQueue requestQueue = Volley.newRequestQueue(getApplication());
@@ -74,14 +75,14 @@ public class AccountActivity extends AppCompatActivity {
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        for(int i = 0; i < response.length();i++){
+                        for (int i = 0; i < response.length();i++){
                             try {
                                 JSONObject jsonObject = response.getJSONObject(i);
                                 userInfos.add (new UserInfo(
                                         jsonObject.getInt("id"),
                                         jsonObject.getString("ten"),
                                         jsonObject.getString("email"),
-                                        jsonObject.getString("std")
+                                        jsonObject.getString("sdt")
                                 ));
                                 tvMail.setText(userInfos.get(0).getEmail());
                                 tvName.setText(userInfos.get(0).getTen());
