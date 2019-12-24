@@ -3,6 +3,7 @@ package com.example.shop.personal;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -26,6 +27,7 @@ import com.example.shop.RegisterActivity;
 import com.example.shop.classoop.UserInfo;
 import com.example.shop.module.Server;
 import com.example.shop.module.SessionManager;
+import com.google.gson.JsonIOException;
 import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
@@ -36,17 +38,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.jar.Attributes;
 
 public class NameActivity extends AppCompatActivity {
 
     Toolbar toolbarName;
     EditText editName;
     Button btnChangeName;
-    int id;
     SessionManager sessionManager;
+    int id;
     ArrayList<UserInfo> userInfos;
 
-    String name, email, phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,28 +99,31 @@ public class NameActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    editName();
+                    editName(id);
                 }
             }
         });
 
     }
 
-    private void editName() {
+    private void editName(final int iD) {
+        final String name = editName.getText().toString().trim();
+        String url_edit= Server.updatename;
 
-         name = editName.getText().toString();
-         email = "";
-         phone = "";
-        String url_edit= Server.updateinfo;
         RequestQueue requestQueue = Volley.newRequestQueue(getApplication());
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url_edit,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(NameActivity.this, response, Toast.LENGTH_SHORT).show();
-                        if(response.equals("Success")){
+                        if(response.equals("Success"))
+                        {
+                            Toast.makeText(NameActivity.this, "Sửa đổi thành công", Toast.LENGTH_SHORT).show();
                             onBackPressed();
+                        }
+                        else
+                        {
+                            Toast.makeText(NameActivity.this, "Không thể thay đổi", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -130,12 +135,10 @@ public class NameActivity extends AppCompatActivity {
                 })
         {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams(){
                 Map<String, String> params = new HashMap<>();
-                params.put("id", id + "");
+                params.put("id", String.valueOf(iD));
                 params.put("ten", name);
-                params.put("email", email);
-                params.put("phone", phone + "");
                 return params;
             }
         };

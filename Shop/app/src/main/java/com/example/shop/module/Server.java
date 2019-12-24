@@ -19,7 +19,8 @@ public class Server {
     public static String getHisOrder = "http://"+ localhost +"/server/hisorder.php";
     public static String upOrder = "http://"+ localhost +"/server/postorder.php";
     public static String getUpOrderDetail = "http://"+ localhost +"/server/postorderdetail.php";
-    public  static  String updateinfo = "http://"+ localhost +"/server/updateinfo.php";
+    public  static  String updatename = "http://"+ localhost +"/server/updatename.php";
+    public  static  String updatephone = "http://"+ localhost +"/server/updatephone.php";
 
 
 }

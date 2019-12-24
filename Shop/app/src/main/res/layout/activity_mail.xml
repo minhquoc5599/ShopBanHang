@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NameActivity">
+    tools:context=".personal.MailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarEmail"
@@ -37,7 +37,7 @@
 
             <EditText
                 android:id="@+id/editEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#6B6A6A"
                 android:textSize="20sp"/>
